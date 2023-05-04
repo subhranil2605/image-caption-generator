@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.heading {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 20px;
+  padding-block: 6px;
+}
+
+.container-main {
+  display: flex;
+  flex: 30;
+}
+
+.upload-img-gen-caption {
+  border: 1px solid gray;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-img {
+  width: 100%;
+  flex: 1;
+  border: 1px solid gray;
+  display: flex;
+}
+
+.dragger-url {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+.dragger {
+  width: 80%;
+  height: 60%;
+  border: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+
+#clickable-div {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: gray;
+  color: white;
+  font-weight: 500;
+}
+
+input[name="external-url"] {
+  background: transparent;
+  outline: none;
+  width: 100%;
+  border-radius: inherit;
+  height: inherit;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+input[name="external-url"]::placeholder {
+  color: white;
+}
+
+.image-upload-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+.ext-url {
+  width: 80%;
+  border-radius: 10px;
+  height: 30px;
+  background: gray;
+}
+
+.generate-cap {
+  border: 1px solid gray;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.no-captions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+
+/* starts */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline: none;
+  /* -webkit-appearance: none; */
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  box-shadow: 0px 0px 1px black;
+  border-radius: 50%;
+  background: gray;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 2px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type="number"] {
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+/* ends */
+
+.generate-btn {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    background: gray;
+}
+
+.img-prvw-captions {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.img-prvw {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-preview {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    border: 1px dashed black;
+}
+
+#image-preview img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.gen-captions {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gen-captions h3 {
+    text-align: start;
+    font-size: 12px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.spinner {
+  position: relative;
+  left: -10%;
+}
+
+.test-images-show {
+  border: 1px solid black;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.test-images-show img {
+    width: 150px;
+    aspect-ratio: 1;
+    border: 2px dashed gray;
+}
+
+.test-images-show img:hover {
+    cursor: pointer;
+}
+

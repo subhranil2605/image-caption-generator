@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+    <title>Image Caption Generator</title>
+  </head>
+  <body>
+    <div class="heading">
+      <div class="page-title">
+        <h1>Image Caption Generator</h1>
+      </div>
+      <div class="logo">
+        <h2 style="color: gray; font-size: 17px">Subhranil Sarkar</h2>
+      </div>
+    </div>
+    <div class="container-main">
+      <div class="upload-img-gen-caption">
+        <div class="upload-img">
+          <div class="dragger-url">
+            <div class="dragger">
+              <div id="clickable-div" style="cursor: pointer">Browse File</div>
+              <input
+                id="file-input"
+                type="file"
+                name="local-image"
+                accept="image/*"
+                style="display: none"
+              />
+              <span id="img-file-name"></span>
+            </div>
+            <div class="ext-url">
+              <input
+                type="text"
+                name="external-url"
+                placeholder="Paste Image URL Here..."
+              />
+            </div>
+          </div>
+          <div class="generate-cap">
+            <div class="no-captions">
+              <h3>No. of Captions</h3>
+              <div class="number-input">
+                <button
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                ></button>
+                <input
+                  class="quantity"
+                  min="1"
+                  max="5"
+                  name="quantity"
+                  value="1"
+                  type="number"
+                />
+                <button
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                  class="plus"
+                ></button>
+              </div>
+            </div>
+            <div>
+              <button class="generate-btn" id="generate-btn">Generate</button>
+            </div>
+          </div>
+        </div>
+        <div class="img-prvw-captions">
+          <div class="img-prvw">
+            <img src="{{ url_for('static', filename='assets/test_images/placeholder.png') }}" id="image-preview" />
+          </div>
+          <div class="gen-captions">
+          </div>
+        </div>
+      </div>
+      <div class="test-images-show">
+        <h2 style="color: gray">Test Images</h2>
+        <img src="{{ url_for('static', filename='assets/test_images/Image1.png') }}" alt="" class="test-image" />
+        <img src="{{ url_for('static', filename='assets/test_images/Image2.png') }}" alt="" class="test-image" />
+        <img src="{{ url_for('static', filename='assets/test_images/Image3.png') }}" alt="" class="test-image" />
+      </div>
+    </div>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>
