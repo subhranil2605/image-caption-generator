@@ -7,9 +7,9 @@ from src.logger import logging
 # import logging
 # logging.basicConfig(level=logging.INFO, format='%(process)d-%(levelname)s-%(message)s')
 
+application=Flask(__name__)
 
-
-app = Flask(__name__)
+app=application
 
 # configuring the upload folder
 UPLOAD_FOLDER = 'uploads/'
